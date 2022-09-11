@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+<!DOCTYPE html>
+<html>
+<style>
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    margin: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #000000;
+}
+div {
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    margin:40px;
+}
+ul {
+  list-style-type: none;
+  padding: 24px;
+  text-align:center;
+  top: 0px;
+  width: 100%;
+  background-color: #2f2f2f;
+}
+li {
+  display: inline;
+  margin:10px;
+  border-style: none;
+  border-radius:0px;
+  border-width:20px;
+  color: #000000;
+}
+#twitterbutton{
+  width: auto;
+  padding:10px;
+  display:inline-block;
+}
+/*unvisited link*/
+a:link {
+  color: white;
+}
+
+/* visited link */
+a:visited {
+  color: white;
+}
+</style>
+<ul class="nav">
+  <li><a href="#https://www.w3school.com/css/default.asp">Home</a></li>
+  <li><a href="#spain">Spain</a></li>
+  <li><a href="#projects">Projects</a></li>
+  <li><a href="#spain">Unit conversions</a></li>
+  <li><a href="#about">About me</a></li>
+</ul>
+
+<div>
+ 
+    <label for="mass"><b>Mass</b></label>
+    <input type="number" id="mass"  placeholder="mass">
+   <label for="unit1">Unit 1</label>
+    <select id="unit1">
+    	<option value="lbm">lbm</option>
+    	<option value="kg">kg</option>
+    	<option value="slug">slug</option>
+    </select>
+
+<label for="unit2">Unit 2</label>
+    <select id="unit2">
+      <option value="lbm">lbm</option>
+      <option value="kg">kg</option>
+      <option value="slug">slug</option>
+    </select>
+
+    <button onclick="massfunction()">Convert</button>
+<p id="demo"></p>
+<script>
+function massfunction() {
+    var convfact=1;
+    if (document.getElementById("unit1").value==document.getElementById("unit2").value)
+    {var convfact=1;}
+    else if (document.getElementById("unit1").value=="lbm"&& document.getElementById("unit2").value=="kg"){var convfact=1/2.20462;}
+    else if ((document.getElementById("unit2").value=="lbm"&& document.getElementById("unit1").value=="kg")){var convfact=2.20462;}
+    else if ((document.getElementById("unit1").value=="lbm"&& document.getElementById("unit2").value=="slug")){var convfact=1/32.174;}
+    else if ((document.getElementById("unit2").value=="lbm"&& document.getElementById("unit1").value=="slug")){var convfact=32.174;}
+    else if ((document.getElementById("unit1").value=="kg"&& document.getElementById("unit2").value=="slug")){var convfact=1/14.5939;}
+    else if (document.getElementById("unit2").value=="kg"&& document.getElementById("unit1").value=="slug"){var convfact=14.5939;}
+    var x = document.getElementById("mass").value;
+	document.getElementById("demo").innerHTML= (convfact*x);
+    }
+</script>
+
+</div>
+<div>
+  
+    <label for="force"><b>Force</b></label>
+    <input type="number" id="force" placeholder="force">
+
+
+
+   <label for="f1">Unit 1</label>
+    <select id="f1" name="f1">
+    	<option value="pound">lbf</option>
+    	<option value="newton">N</option>
+    </select>
+
+<label for="f2">Unit 2</label>
+    <select id="f2" name="f2">
+      <option value="pound">lbf</option>
+      <option value="newton">N</option>
+    </select>
+<button onclick="forcefunction()">Convert</button>
+
+<p id="demo1"></p>
+<script>
+function forcefunction() {
+    var convfact=1;
+    var x = document.getElementById("force").value;
+    if (document.getElementById("f1").value==document.getElementById("f2").value)
+    {var convfact=1;}
+    else if (document.getElementById("f1").value=="newton"&& document.getElementById("f2").value=="pound"){var convfact=1/4.44822;}
+    else if (document.getElementById("f2").value=="newton"&&document.getElementById("f1").value=="pound"){var convfact=4.44822;}    document.getElementById("demo1").innerHTML= (convfact*x);
+    }
+</script>
+</div>
+<div>
+
+    <label for="temp"><b>Temperature</b></label>
+    <input type="number" id="temp" placeholder="temperature">
+
+   <label for="temp1">Unit 1</label>
+    <select id="temp1" name="temp1">
+    	<option value="F">Fahrenheit</option>
+    	<option value="C">Celsius</option>
+    	<option value="R">Rankine</option>
+        <option value="K">Kelvin</option>
+    </select>
+
+<label for="temp2">Unit 2</label>
+    <select id="temp2" name="temp2">
+      <option value="F">Fahrenheit</option>
+      <option value="C">Celsius</option>
+		<option value="R">Rankine</option>
+        <option value="K">Kelvin</option>
+    </select>
+<button onclick="tempfunction()">Convert</button>
+<p id="demot"></p>
+<script>
+function tempfunction() {
+    
+    var convfact=3;
+    var x=parseFloat(document.getElementById("temp").value);
+    if (document.getElementById("temp1").value==document.getElementById("temp2").value)
+    {var convfact=1; document.getElementById("demot").innerHTML=(convfact*x);}
+    else if (document.getElementById("temp1").value=="K"&& document.getElementById("temp2").value=="R")
+    {var convfact=1.8; document.getElementById("demot").innerHTML=(convfact*x);}
+    else if (document.getElementById("temp2").value=="K"&&document.getElementById("temp1").value=="R")
+    {var convfact=5/9; document.getElementById("demot").innerHTML=(convfact*x);}
+    else if (document.getElementById("temp1").value=="K"&& document.getElementById("temp2").value=="C")
+    {var convfact=-273.15;document.getElementById("demot").innerHTML = (+x + +convfact);}
+    else if (document.getElementById("temp1").value=="C"&& document.getElementById("temp2").value=="K")
+    {var convfact=273.15;document.getElementById("demot").innerHTML = (+x + +convfact);}
+    else if (document.getElementById("temp1").value=="F"&& document.getElementById("temp2").value=="R")
+    {var convfact=(460);document.getElementById("demot").innerHTML = (+x + +convfact);}
+    else if (document.getElementById("temp1").value=="R"&& document.getElementById("temp2").value=="F")
+    {var convfact=-460;document.getElementById("demot").innerHTML = (+x + +convfact);}
+    else if (document.getElementById("temp1").value=="R"&& document.getElementById("temp2").value=="C")
+    {document.getElementById("demot").innerHTML = (x*5/9-273.15)}
+    else if(document.getElementById("temp1").value=="F"&& document.getElementById("temp2").value=="C")
+    {document.getElementById("demot").innerHTML = (x-32)*5/9;}
+    else if(document.getElementById("temp1").value=="K"&& document.getElementById("temp2").value=="F")
+    {document.getElementById("demot").innerHTML = (x*1.8-458.67);}
+    else if(document.getElementById("temp1").value=="C"&& document.getElementById("temp2").value=="F")
+    {document.getElementById("demot").innerHTML = (x*1.8+32);}
+    
+    }
+    
+</script>
+</div>
+<div>
+ 
+    <label for="energy"><b>Energy</b></label>
+    <input type="text" id="energy" placeholder="energy">
+
+	<label for="e1">Unit 1</label>
+    <select id="e1" name="e1">
+    	<option value="j">Joule</option>
+    	<option value="btu">BTU</option>
+    	<option value="kwh">kilowatt hour</option>
+        <option value="cal">calorie</option>
+    </select>
+
+<label for="e2">Unit 2</label>
+    <select id="e2" name="e2">
+    	<option value="j">Joule</option>
+        <option value="btu">BTU</option>
+    	<option value="kwh">kilowatt hour</option>
+        <option value="cal">calorie</option>
+    </select>
+<button onclick="enfunct()">Convert</button>
+<p id="demoe"></p>
+<script>
+function enfunct() {
+	var convfact=3;
+    if (document.getElementById("e1").value==document.getElementById("e2").value)
+    {var convfact=1}
+    else if (document.getElementById("e1").value=="j"&&document.getElementById("e2").value=="btu")
+    {var convfact=1/1055;}
+    else if (document.getElementById("e1").value=="j"&&document.getElementById("e2").value=="kwh")
+    {var convfact=1/3600000;}
+    else if (document.getElementById("e1").value=="j"&&document.getElementById("e2").value=="cal")
+    {var convfact=1/4.184;}
+    else if (document.getElementById("e1").value=="btu"&&document.getElementById("e2").value=="j")
+    {var convfact=1055;}
+    else if (document.getElementById("e1").value=="btu"&&document.getElementById("e2").value=="kwh")
+    {var convfact=1/3412.14;}
+    else if (document.getElementById("e1").value=="btu"&&document.getElementById("e2").value=="cal")
+    {var convfact=252.164;}
+    else if (document.getElementById("e1").value=="kwh"&&document.getElementById("e2").value=="j")
+    {var convfact=3600000;}
+    else if (document.getElementById("e1").value=="kwh"&&document.getElementById("e2").value=="btu")
+    {var convfact=3412.14;}
+    else if (document.getElementById("e1").value=="kwh"&&document.getElementById("e2").value=="cal")
+    {var convfact=860421;}
+    else if (document.getElementById("e1").value=="cal"&&document.getElementById("e2").value=="j")
+    {var convfact=1.184;}
+    else if (document.getElementById("e1").value=="cal"&&document.getElementById("e2").value=="btu")
+    {var convfact=1/252.164;}
+    else if (document.getElementById("e1").value=="cal"&&document.getElementById("e2").value=="kwh")
+    {var convfact=1/860421;}
+	var x = document.getElementById("energy").value;
+    document.getElementById("demoe").innerHTML = (convfact*x);
+    
+}
+</script>
+</div>
+<div>
+    <label for="power"><b>Power</b></label>
+    <input type="text" id="power" placeholder="power">
+
+	<label for="pow1">Unit 1</label>
+    <select id="pow1" name="pow1">
+    	<option value="w">watt</option>
+    	<option value="hp">horsepower</option>
+    	<option value="btuh">BTU/hr</option>
+    </select>
+
+<label for="pow2">Unit 2</label>
+    <select id="pow2" name="pow2">
+      <option value="w">watt</option>
+      <option value="hp">horspower</option>
+      <option value="btuh">BTU/hr</option>
+    </select>
+<button onclick="powerfunction()">Convert</button>
+<p id="demop"></p>
+<script>
+function powerfunction() {
+    var convfact=2;
+    if (document.getElementById("pow1").value==document.getElementById("pow2").value){var convfact=1;}
+    else if (document.getElementById("pow1").value=="w"&&document.getElementById("pow2").value=="hp")
+    {var convfact=1/745.7;}
+    else if (document.getElementById("pow1").value=="hp"&&document.getElementById("pow2").value=="w")
+    {var convfact=745.7;}
+    else if (document.getElementById("pow1").value=="hp"&&document.getElementById("pow2").value=="btuh")
+    {var convfact=2544.43;}
+    else if (document.getElementById("pow1").value=="w"&&document.getElementById("pow2").value=="btuh")
+    {var convfact=3.412142;}
+    else if (document.getElementById("pow1").value=="btuh"&&document.getElementById("pow2").value=="hp")
+    {var convfact=1/2544.43;}
+    else if (document.getElementById("pow1").value=="btuh"&&document.getElementById("pow2").value=="w")
+    {var convfact=1/3.412142;}
+    var x = document.getElementById("power").value;
+    document.getElementById("demop").innerHTML = (convfact*x);
+    
+}
+</script>
+</div>
+<div>
+    <label for="pressure"><b>Pressure</b></label>
+    <input type="text" id="pressure"  placeholder="pressure">
+
+
+
+   <label for="pres1">Unit 1</label>
+    <select id="pres1" name="pres1">
+    	<option value="psi">psi</option>
+    	<option value="kpa">kilopascals</option>
+        <option value="mmhg">millimeters of mercury</option>
+    </select>
+
+<label for="pres2">Unit 2</label>
+    <select id="pres2" name="pres2">
+      <option value="psi">psi</option>
+      <option value="kpa">kilopascals</option>
+      <option value="mmhg">millimeters of mercury</option>
+    </select>
+<button onclick="pressurefunction()">Convert</button>
+<p id="demopres"></p>
+<script>
+function pressurefunction() {
+    var convfact=1;
+    var x =document.getElementById("pressure").value;
+    if (document.getElementById("pres1").value==document.getElementById("pres2").value){var convfact=1;}
+    else if (document.getElementById("pres1").value=="kpa"&&document.getElementById("pres2").value=="psi")
+    {var convfact=14.7/101.325;}
+    else if (document.getElementById("pres1").value=="mmhg"&&document.getElementById("pres2").value=="psi")
+    {var convfact=14.7/760;}
+    else if (document.getElementById("pres1").value=="mmhg"&&document.getElementById("pres2").value=="kpa")
+    {var convfact=101.325/760;}
+    else if (document.getElementById("pres1").value=="psi"&&document.getElementById("pres2").value=="kpa")
+    {var convfact=101.325/14.7;}
+    else if (document.getElementById("pres1").value=="psi"&&document.getElementById("pres2").value=="mmhg")
+    {var convfact=760/14.7;}
+    else if (document.getElementById("pres1").value=="kpa"&&document.getElementById("pres2").value=="mmhg")
+    {var convfact=760/101.325;}
+    document.getElementById("demopres").innerHTML = (convfact*x);
+    
+}
+</script>
+</div>
+<div>
+    <label for="volume"><b>Volume</b></label>
+    <input type="text" id="volume"  placeholder="volume">
+
+
+
+   <label for="vol1">Unit 1</label>
+    <select id="vol1" name="vol1">
+    	<option value="oz">ounces</option>
+    	<option value="gal">gallons</option>
+        <option value="liter">liters</option>
+        <option value="m3">meters cubed</option>
+    	<option value="in3">inches cubed</option>
+        <option value="ft3">feet cubed</option>
+    </select>
+
+<label for="vol2">Unit 2</label>
+    <select id="vol2" name="vol2">
+      <option value="oz">ounces</option>
+      <option value="gal">gallons</option>
+      <option value="liter">liters</option>
+      <option value="m3">meters cubed</option>
+      <option value="in3">inches cubed</option>
+      <option value="ft3">feet cubed</option>
+    </select>
+<button onclick="volfunction()">Convert</button>
+<p id="demovol"></p>
+<script>
+function volfunction() {
+    var convfact1=1.0;
+    var convfact2=1.0;
+    var x =document.getElementById("volume").value;
+    if (document.getElementById("vol1").value=="oz")
+    {var convfact1=1/33814;}
+    else if (document.getElementById("vol1").value=="gal")
+    {var convfact1=1/264.172;}
+    else if (document.getElementById("vol1").value=="liter")
+    {var convfact1=.001;}
+    else if (document.getElementById("vol1").value=="in3")
+    {var convfact1=1/61023.7;}
+    else if (document.getElementById("vol1").value=="ft3")
+    {var convfact1=1/35.3147;}
+    else if (document.getElementById("vol1").value=="m3")
+    {var convfact1=1.0;}
+    if (document.getElementById("vol2").value=="oz")
+    {var convfact2=33814;}
+    else if (document.getElementById("vol2").value=="liter")
+    {var convfact2=1000;}
+    else if (document.getElementById("vol2").value=="gal")
+    {var convfact2=264.172;}
+    else if (document.getElementById("vol2").value=="in3")
+    {var convfact2=61023.7;}
+    else if (document.getElementById("vol2").value=="ft3")
+    {var convfact2=35.3147;}
+    else if (document.getElementById("vol2").value=="m3")
+    {var convfact2=1.0;}
+    var y=convfact1*convfact2;
+    var z = x*y;
+    document.getElementById("demovol").innerHTML = (z);
+}
+</script>
+</div>
+<div>
+ 
+    <label for="velocity"><b>Velocity</b></label>
+    <input type="text" id="velocity" placeholder="velocity">
+
+	<label for="v1">Unit 1</label>
+    <select id="v1" name="v1">
+    	<option value="km/h">km/h</option>
+    	<option value="mph">mph</option>
+    	<option value="ft/s">ft/s</option>
+        <option value="m/s">m/s</option>
+    </select>
+
+<label for="v2">Unit 2</label>
+    <select id="v2" name="v2">
+    	<option value="km/h">km/h</option>
+        <option value="mph">mph</option>
+    	<option value="ft/s">ft/s</option>
+        <option value="m/s">m/s</option>
+    </select>
+<button onclick="velfunct()">Convert</button>
+<p id="demovel"></p>
+<script>
+function velfunct() {
+	var convfact=3;
+    if (document.getElementById("e1").value==document.getElementById("v2").value)
+    {var convfact=1}
+    else if (document.getElementById("v1").value=="km/h"&&document.getElementById("v2").value=="mph")
+    {var convfact=1/1.609344;}
+    else if (document.getElementById("v1").value=="km/h"&&document.getElementById("v2").value=="ft/s")
+    {var convfact=22/(1.609344*15);}
+    else if (document.getElementById("v1").value=="km/hr"&&document.getElementById("v2").value=="m/s")
+    {var convfact=5/18;}
+    else if (document.getElementById("v1").value=="mph"&&document.getElementById("v2").value=="km/h")
+    {var convfact=1.609344;}
+    else if (document.getElementById("v1").value=="mph"&&document.getElementById("v2").value=="ft/s")
+    {var convfact=22/15;}
+    else if (document.getElementById("v1").value=="mph"&&document.getElementById("v2").value=="m/s")
+    {var convfact=1/2.236936;}
+    else if (document.getElementById("v1").value=="ft/s"&&document.getElementById("v2").value=="km/h")
+    {var convfact=(1.609344*15)/22;}
+    else if (document.getElementById("v1").value=="ft/s"&&document.getElementById("v2").value=="mph")
+    {var convfact=15/22;}
+    else if (document.getElementById("v1").value=="ft/s"&&document.getElementById("v2").value=="m/s")
+    {var convfact=1/3.28084;}
+    else if (document.getElementById("v1").value=="m/s"&&document.getElementById("v2").value=="km/h")
+    {var convfact=18/5;}
+    else if (document.getElementById("v1").value=="m/s"&&document.getElementById("v2").value=="mph")
+    {var convfact=2.236936;}
+    else if (document.getElementById("v1").value=="m/s"&&document.getElementById("v2").value=="ft/s")
+    {var convfact=3.28084;}
+	var x = document.getElementById("velocity").value;
+    document.getElementById("demovel").innerHTML = (convfact*x);
+    
+}
+</script>
+</div>
+
+</body>
+</html>

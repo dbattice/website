@@ -38,12 +38,12 @@ li {
 }
 /*unvisited link*/
 a:link {
-  color: white;
+  color: #8000ff;
 }
 
 /* visited link */
 a:visited {
-  color: white;
+  color: #0000FF;
 }
 .footpara {
     width: 99%;
@@ -71,20 +71,26 @@ a:visited {
 
 <h1>Hello World</h1>
 <p id="p0">
-This is a filler sentence. Check out this link.<sup class="footdef">1</sup> Also, here is another link.<sup class="footdef">2</sup>
+This is a filler sentence. Check out this link.<sup><a href="#fn1" id="ref1">1</a></sup> 
+Also, here is another link.<sup><a href="#fn2" id="ref2">2</a></sup>
 </p>
 <p>
 Basic equation for vibrations:
 <i> m*x''+c*x'+k*x=0</i>
 m=mass, c=damper, k= spring constant, x=x(t), 
-Since this is a second order differential equation it will have one of three solutions.
-Overdampened case when c>2*sqrt(m*k), in this case solution is 
-<i>x(t)=a*e(-c*t)+b*e^(-d*t)</i> 
-perfectly dampened case when c=2sqrtm*k) 
-<i>x(t)=a*e^(-m*t)+b*e^(m*t)*t</i> 
-underdampened case when c<2*sqrt(m*k) 
-<i>x(t)=a*e^(-m*t)*cos(wt+phi)+b*e-m*t)*sin(wt+phi)</i> 
+Since this is a second order differential equation it will have one of three solutions. </p>
+<p>Overdampened case when c&gt;2*sqrt(m*k)</p> 
+<p><i>x(t)=a*e<sup>(-c*t)</sup>+b*e<sup>(-d*t)</sup></i></p> 
+<p>Perfectly dampened case when c=2*sqrt(m*k): </p> 
+<p><i>x(t)=a*e<sup>(-m*t)</sup>+b*e<sup>(-m*t)</sup>*t</i></p> 
+<p>Underdampened case when c&lt;2*sqrt(m*k):</p> 
+<p><i>x(t)=a*e<sup>(-m*t)</sup>*cos(wt+phi)+b*e<sup>(-m*t)</sup>*sin(wt+phi)</i></p> 
 </p>
-<p  id="footnotes">Test footnote</p>
+<p  id="footnotes"><hr></hr>
+
+<sup id="fn1">1. <a href="https://en.wikipedia.org/wiki/Tabarnia">See this on Catalonia</a>
+<a href="#ref1" title="Jump back to footnote 1 in the text.">return</a></sup>
+<sup id="fn2">2. <a href="https://en.wikipedia.org/wiki/Antipodes">See this on antipodes</a>
+<a href="#ref2" title="Jump back to footnote 2 in the text.">return</a></sup></p>
 </body>
 </html>

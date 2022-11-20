@@ -1,50 +1,22 @@
 <!DOCTYPE html>
 <html>
 <style>
-input[type=submit] {
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px;
-    margin: 8px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-input[type=submit]:hover {
-    background-color: #000000;
-}
-div {
-    border-radius: 20px;
-    background-color: #ffffff;
-    padding: 20px;
-    margin:40px;
-}
-ul {
-  list-style-type: none;
-  padding: 24px;
-  text-align:center;
-  top: 0px;
+ul{
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 0px;
   width: 100%;
-  background-color: #2f2f2f;
+  text-align:center;
 }
-li {
-  display: inline;
-  margin:10px;
-  border-style: none;
-  border-radius:0px;
-  border-width:20px;
-  color: #000000;
-}
-/*unvisited link*/
-a:link {
-  color: #8000ff;
+/*for li tags*/
+.topnav { 
+     list-style-type: none;
+     margin: 20px;
+     padding: 0px;
+     display: inline;
+     color: #FFFFFF;
 }
 
-/* visited link */
-a:visited {
-  color: #0000FF;
-}
 .footpara {
     width: 99%;
     text-alignt: left;
@@ -57,40 +29,43 @@ a:visited {
 .footdef {
     line-height: 3em;
 }
+/* < img src="gaztelugatxe1.jpg" width=100% > */
 </style>
+<header>
+	<ul>
+		<li class="topnav"><a href="https://www.zetadox.xyz">Zetados</a></li>
+		<li class="topnav"><a href="spain">Spain</a></li>
+		<li class="topnav"><a href="#projects">Projects</a></li>
+		<li class="topnav"><a href="mohrscircle">Mohr's Circle</a></li>
+		<li class="topnav"><a href="unit_conversion">Unit conversions</a></li>
+		<li class="topnav"><a href="vibrations">Vibrations</a></li>
+		<li class="topnav"><a href="#aboutme">About me</a></li>
+	</ul>
+</header>
 <body>
-<ul class="nav">
-  <li><a href="#https://www.zetadox.xyz">Home</a></li>
-  <li><a href="#spain">Spain</a></li>
-  <li><a href="#projects">Projects</a></li>
-  <li><a href="#mohrscircle">Mohr's Circle</a></li>
-  <li><a href="#unit_convertor">Unit conversions</a></li>
-  <li><a href="#vibrations">Vibrations</a></li>
-  <li><a href="#about">About me</a></li>
-</ul>
-
 <h1>Hello World</h1>
+<ol type="I"  id="agenda">
+	<li> politics and expertise </li>
+	<li> political institutions and comparisons </li>
+	<li> Economic possibilities </li>
+	<li> Land politics runs deep </li>
+	<li> this website header</li>
+	<li> public space </li>
+	<li> Federalism part one on democracy, part two on states, part three on local government </li>
+	<li> Making Chicago Great Again </li>
+	<li> Coronavirus and Sweden </li>
+</ol>
 <p id="p0">
 This is a filler sentence. Check out this link.<sup><a href="#fn1" id="ref1">1</a></sup> 
 Also, here is another link.<sup><a href="#fn2" id="ref2">2</a></sup>
 </p>
-<p>
-Basic equation for vibrations:
-<i> m*x''+c*x'+k*x=0</i>
-m=mass, c=damper, k= spring constant, x=x(t), 
-Since this is a second order differential equation it will have one of three solutions. </p>
-<p>Overdampened case when c&gt;2*sqrt(m*k)</p> 
-<p><i>x(t)=a*e<sup>(-c*t)</sup>+b*e<sup>(-d*t)</sup></i></p> 
-<p>Perfectly dampened case when c=2*sqrt(m*k): </p> 
-<p><i>x(t)=a*e<sup>(-m*t)</sup>+b*e<sup>(-m*t)</sup>*t</i></p> 
-<p>Underdampened case when c&lt;2*sqrt(m*k):</p> 
-<p><i>x(t)=a*e<sup>(-m*t)</sup>*cos(wt+phi)+b*e<sup>(-m*t)</sup>*sin(wt+phi)</i></p> 
-</p>
+
 <p  id="footnotes"><hr></hr>
 
-<sup id="fn1">1. <a href="https://en.wikipedia.org/wiki/Tabarnia">See this on Catalonia</a>
-<a href="#ref1" title="Jump back to footnote 1 in the text.">return</a></sup>
-<sup id="fn2">2. <a href="https://en.wikipedia.org/wiki/Antipodes">See this on antipodes</a>
-<a href="#ref2" title="Jump back to footnote 2 in the text.">return</a></sup></p>
+<sup id="fn1">1 <a href="https://en.wikipedia.org/wiki/Tabarnia">See this on Catalonia</a>
+<a href="#ref1">return</a></sup>
+<sup id="fn2">2 <a href="https://en.wikipedia.org/wiki/Antipodes">See this on antipodes</a>
+<a href="#ref2">return</a></sup>
+</sup></p>
 </body>
 </html>

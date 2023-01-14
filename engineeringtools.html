@@ -1,30 +1,7 @@
 <!DOCTYPE html>
 <html>
-<head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-.collapsible {
-  background-color: #777;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
-.active, .collapsible:hover {
-  background-color: #555;
-}
-
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-}
 ul{
   padding-top: 24px;
   padding-bottom: 24px;
@@ -33,40 +10,32 @@ ul{
   text-align:center;
 }
 /*for li tags*/
-.topnav { 
+.liheader { 
      list-style-type: none;
      margin: 20px;
      padding: 0px;
      display: inline;
-     color: #FFFFFF;
-}
 
-.footpara {
-    width: 99%;
-    text-alignt: left;
-    float: right;
-    padding: 0;
-    margin: 0;
-	color: #0000F0;
 }
-
-.footdef {
-    line-height: 3em;
+.topnav { 
+	color: #FFFFFF;
 }
+a.topnav {text-decoration: none;}
+a.topnav:link, a.topnav:visited, a.topnav:hover {
+    color: black;
+}
+/* < img src="gaztelugatxe1.jpg" width=100% > */
 </style>
-<base href="https://www.zetados.xyz/" target="_blank">
-</head>
 <header>
 	<ul>
-		<li class="topnav"><a href="https://www.zetados.xyz">Zetados</a></li>
-		<li class="topnav"><a href="#spain">Spain</a></li>
-		<li class="topnav"><a href="#projects">Projects</a></li>
-		<li class="topnav"><a href="engineeringtools">Engineering Tools</a></li>
-		<li class="topnav"><a href="#aboutme">About me</a></li>
+		<li class="liheader"><a href="index" class="topnav">Zetados</a></li>
+		<li class="liheader"><a href="spain" class="topnav">Spain</a></li>
+		<li class="liheader"><a href="projects" class="topnav">Projects</a></li>
+		<li class="liheader"><a href="engineeringtools" class="topnav">Engineering Tools</a></li>
 	</ul>
 </header>
 <body>
-
+<h4>Add Bernoulli's equation and fluids? Transmissions? engines?</h4>
 <button type="button" class="collapsible">Mohr's Circle and stresses</button>
 <div class="content">
 <h3>

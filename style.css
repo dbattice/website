@@ -17,8 +17,15 @@ ul{
 }
 a.topnav {text-decoration: none;}
 a.topnav:link, a.topnav:visited, a.topnav:hover {
-	color: black;
+	color: #FFFFF;
 }
 h1 {
 	text-align: center;
+}
+.footdef {
+	color: #0000FF;
+}
+a.footdef {text-decoration: none;}
+a.footdef:link, a.footdef:visited, a.footdef:hover {
+	color: #0000FF;
 }

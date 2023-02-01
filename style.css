@@ -1,0 +1,24 @@
+#ul{
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 0px;
+  width: 100%;
+  text-align:center;
+}
+/*for li tags*/
+.liheader { 
+     list-style-type: none;
+     margin: 20px;
+     padding: 0px;
+     display: inline;
+}
+.topnav { 
+	color: #FFFFFF;
+}
+a.topnav {text-decoration: none;}
+a.topnav:link, a.topnav:visited, a.topnav:hover {
+    color: black;
+}
+#h1 {
+text-align: center;
+}

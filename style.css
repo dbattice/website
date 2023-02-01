@@ -13,11 +13,11 @@ ul{
 	display: inline;
 }
 .topnav { 
-	color: #FFFFFF;	
+	color: #000000;
+	text-decoration: none;
 }
-a.topnav {text-decoration: none;}
 a.topnav:link, a.topnav:visited, a.topnav:hover {
-	color: #FFFFF;
+	color: #000000;
 }
 h1 {
 	text-align: center;
@@ -25,7 +25,6 @@ h1 {
 .footer1 {
 	color: #0000FF;
 }
-
 a.footer1:link, a.footerinline:visited, a.footerinline:hover {
 	color: #0000FF;
 }

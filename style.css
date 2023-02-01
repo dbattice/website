@@ -22,10 +22,10 @@ a.topnav:link, a.topnav:visited, a.topnav:hover {
 h1 {
 	text-align: center;
 }
-.footdef {
+.footer1 {
 	color: #0000FF;
 }
-a.footdef {text-decoration: none;}
-a.footdef:link, a.footdef:visited, a.footdef:hover {
+
+a.footer1:link, a.footerinline:visited, a.footerinline:hover {
 	color: #0000FF;
 }

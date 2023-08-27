@@ -88,21 +88,19 @@ function areafunction() {
 </script>
 
 </div>
-
-
-  <div>
+<div>
  
     <label for="mass"><b>Mass</b></label>
     <input type="number" id="mass"  placeholder="mass">
-	<label for="unit1">Unit 1</label>
-    <select id="unit1">
+	<label for="unitm1">Unit 1</label>
+    <select id="unitm1">
     	<option value="lbm">lbm</option>
     	<option value="kg">kg</option>
     	<option value="slug">slug</option>
     </select>
 
-<label for="unit2">Unit 2</label>
-    <select id="unit2">
+<label for="unitm2">Unit 2</label>
+    <select id="unitm2">
       <option value="lbm">lbm</option>
       <option value="kg">kg</option>
       <option value="slug">slug</option>
@@ -113,14 +111,14 @@ function areafunction() {
 <script>
 function massfunction() {
     var convfact=1;
-    if (document.getElementById("unit1").value==document.getElementById("unit2").value)
+    if (document.getElementById("unitm1").value==document.getElementById("unitm2").value)
     {var convfact=1;}
-    else if (document.getElementById("unit1").value=="lbm"&& document.getElementById("unit2").value=="kg"){var convfact=1/2.20462;}
-    else if ((document.getElementById("unit2").value=="lbm"&& document.getElementById("unit1").value=="kg")){var convfact=2.20462;}
-    else if ((document.getElementById("unit1").value=="lbm"&& document.getElementById("unit2").value=="slug")){var convfact=1/32.174;}
-    else if ((document.getElementById("unit2").value=="lbm"&& document.getElementById("unit1").value=="slug")){var convfact=32.174;}
-    else if ((document.getElementById("unit1").value=="kg"&& document.getElementById("unit2").value=="slug")){var convfact=1/14.5939;}
-    else if (document.getElementById("unit2").value=="kg"&& document.getElementById("unit1").value=="slug"){var convfact=14.5939;}
+    else if (document.getElementById("unitm1").value=="lbm"&& document.getElementById("unit2m").value=="kg"){var convfact=1/2.20462;}
+    else if ((document.getElementById("unitm2").value=="lbm"&& document.getElementById("unitm1").value=="kg")){var convfact=2.20462;}
+    else if ((document.getElementById("unitm1").value=="lbm"&& document.getElementById("unit2").value=="slug")){var convfact=1/32.174;}
+    else if ((document.getElementById("unitm2").value=="lbm"&& document.getElementById("unitm1").value=="slug")){var convfact=32.174;}
+    else if ((document.getElementById("unitm1").value=="kg"&& document.getElementById("unitm2").value=="slug")){var convfact=1/14.5939;}
+    else if (document.getElementById("unitm2").value=="kg"&& document.getElementById("unitm1").value=="slug"){var convfact=14.5939;}
     var x = document.getElementById("mass").value;
 	document.getElementById("demo").innerHTML= (convfact*x);
     }
@@ -177,8 +175,8 @@ function forcefunction() {
         <option value="K">Kelvin</option>
     </select>
 <button onclick="tempfunction()">Convert</button>
-<p>0 Fahrenheit = 459.67 Rankine. 0 celsius = 273.15 K.</p>
 <p id="demot"></p>
+<p>0 Fahrenheit = 459.67 Rankine. 0 celsius = 273.15 K.</p>
 <script>
 function tempfunction() {
     
